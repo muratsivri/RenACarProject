@@ -18,9 +18,10 @@ namespace Core.Utilities.Results
         {
 
         }
-        public SuccessDataResult(List<global::Entities.Concrete.Brand> brands) :base(default,true)
+        public SuccessDataResult() : base(default, true)
         {
 
         }
+
     }
 }
