@@ -21,14 +21,14 @@ namespace Business.Concrete
 
         public IResult Add(Car car)
         {
-            if (car.CarName.Length <= 2)
-            {
-                return new ErrorResult(Messages.ProductNameInvalid);
+            //if (car.CarName.Length <= 2)
+            //{
+            //    return new ErrorResult(Messages.ProductNameInvalid);
 
-            }
+            //}
             _carDal.Add(car);
             return new SuccessResult(Messages.ProductAdded);
-        }
+        } 
 
         public IResult Delete(Car car)
         {
