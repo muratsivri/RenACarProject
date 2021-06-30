@@ -26,7 +26,6 @@ namespace Business.Concrete
         [ValidationAspect(typeof(CarValidator))] 
         public IResult Add(Car car)
         {
-           IResult result= BusinessRules.Run()
             _carDal.Add(car);
             return new SuccessResult(Messages.RentalAdded);
         } 
@@ -62,9 +61,6 @@ namespace Business.Concrete
             return new SuccessResult(Messages.RentalUpdated);
         }
 
-        private IResult ChecfIfCarNameExist(int carName)
-        {
-            return _carDal.GetAll(c => c.CarName == carName).Any();
-        }
+   
     }
 }
