@@ -41,6 +41,16 @@ namespace Business.Concrete
             return new SuccessDataResult<User>(_userDal.Get(u => u.UserId == userId), Messages.UsersListed);
         }
 
+        public User GetByMail(string email)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<OperationClaim> GetClaims(User user)
+        {
+            throw new NotImplementedException();
+        }
+
         public IResult Update(User user)
         {
             _userDal.Update(user);
